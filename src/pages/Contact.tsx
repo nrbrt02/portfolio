@@ -23,10 +23,6 @@ const Contact = () => {
             <span>nrbrt2002@gmail.com</span>
           </div>
 
-          <div className="flex items-center gap-4 text-lg">
-            <FaPhone className="text-pink-600" />
-            <span>+250 780 312 244</span>
-          </div>
 
           <div className="flex items-center gap-4 text-lg">
             <FaMapMarkerAlt className="text-pink-600" />

@@ -64,18 +64,7 @@ const HeroSection = () => {
         >
           <FaEnvelope />
         </a>
-        <div className="relative group">
-          <a
-            href="tel:+250780312244"
-            className="hover:text-pink-500 transition-transform hover:scale-125"
-            aria-label="Call Norbert"
-          >
-            <FaPhone />
-          </a>
-          <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1 rounded-md text-xs bg-gray-800 text-white opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap z-10">
-            +250 780 312 244
-          </span>
-        </div>
+        
       </div>
 
 

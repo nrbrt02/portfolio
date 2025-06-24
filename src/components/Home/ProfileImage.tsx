@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ProfilePic from "../../assets/pro.jpg";
+// import ProfilePic from "../../assets/pro.jpg";
 
 const ProfileImage = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ const ProfileImage = () => {
         className="cursor-pointer rounded-full p-1 bg-gradient-to-tr from-pink-500 via-purple-500 to-indigo-500 shadow-xl"
       >
         <img
-          src={ProfilePic}
+          src="https://plus.unsplash.com/premium_photo-1724772313198-a52d1d72a532?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           alt="Norbert"
           className="object-cover w-64 h-64 rounded-full border-4 border-white dark:border-gray-900 shadow-md"
         />
@@ -55,7 +55,7 @@ const ProfileImage = () => {
 
                 {/* Image and Info */}
                 <img
-                  src={ProfilePic}
+                  src="https://plus.unsplash.com/premium_photo-1724772313198-a52d1d72a532?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Full Norbert"
                   className="rounded-lg w-full object-cover"
                 />
