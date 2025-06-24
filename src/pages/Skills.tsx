@@ -5,6 +5,7 @@ import SkillSection from "../components/skills/SkillSection";
 import {
   FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaPython, FaGitAlt, FaGithub,
   FaDocker, FaAws, FaLinux, FaJava, FaFigma, FaDatabase, FaJs, FaPhp,
+  FaBootstrap,
 } from "react-icons/fa";
 import {
   SiTypescript, SiTailwindcss, SiMongodb, SiPostgresql, SiMysql, SiExpress,
@@ -43,6 +44,7 @@ const Skills = () => {
           { label: "React", Icon: FaReact },
           { label: "Next.js", Icon: SiNextdotjs },
           { label: "Tailwind CSS", Icon: SiTailwindcss },
+          { label: "Bootstrap", Icon: FaBootstrap },
           { label: "HTML5", Icon: FaHtml5 },
           { label: "CSS3", Icon: FaCss3Alt },
           { label: "Framer Motion", Icon: SiFramer },

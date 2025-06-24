@@ -1,6 +1,7 @@
 import HeroSection from "../components/Home/HeroSection";
 import ProfileImage from "../components/Home/ProfileImage";
 import WorkExperience from "../components/Home/WorkExperience";
+import TopProjectsPreview from "../components/projects/TopProjectsPreview";
 import TopSkillsPreview from "../components/skills/TopSkillsPreview";
 
 const Home = () => {
@@ -15,6 +16,7 @@ const Home = () => {
 
       <div className="max-w-6xl mx-auto mt-16 px-6">
         <TopSkillsPreview />
+        <TopProjectsPreview />
         <WorkExperience />
       </div>
     </div>
