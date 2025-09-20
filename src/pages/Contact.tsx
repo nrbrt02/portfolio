@@ -20,7 +20,7 @@ const Contact = () => {
         <div className="space-y-6">
           <div className="flex items-center gap-4 text-lg">
             <FaEnvelope className="text-pink-600" />
-            <span>nrbrt2002@gmail.com</span>
+            <span>nor.imurinde@gmail.com</span>
           </div>
 
 
