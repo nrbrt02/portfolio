@@ -1,23 +1,27 @@
 import { createContext, useEffect, useState, ReactNode } from "react";
 
 export const ThemeContext = createContext({
-  darkMode: false,
+  darkMode: true,
   toggleDarkMode: () => {},
 });
 
+const readStored = () => {
+  try {
+    return localStorage.getItem("theme") !== "light";
+  } catch {
+    return true;
+  }
+};
+
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [darkMode, setDarkMode] = useState(() => {
-    return localStorage.getItem("theme") === "dark";
-  });
+  const [darkMode, setDarkMode] = useState(readStored);
 
   useEffect(() => {
-    const root = window.document.documentElement;
-    if (darkMode) {
-      root.classList.add("dark");
-      localStorage.setItem("theme", "dark");
-    } else {
-      root.classList.remove("dark");
-      localStorage.setItem("theme", "light");
+    document.documentElement.classList.toggle("dark", darkMode);
+    try {
+      localStorage.setItem("theme", darkMode ? "dark" : "light");
+    } catch {
+      /* storage unavailable */
     }
   }, [darkMode]);
 

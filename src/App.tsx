@@ -1,23 +1,31 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import { MotionConfig } from "framer-motion";
 import Navbar from "./components/Navbar";
-import Skills from "./pages/Skills";
-import Projects from "./pages/Projects";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
+import Hero from "./components/sections/Hero";
+import About from "./components/sections/About";
+import Experience from "./components/sections/Experience";
+import Projects from "./components/sections/Projects";
+import Skills from "./components/sections/Skills";
+import Credentials from "./components/sections/Credentials";
+import Contact from "./components/sections/Contact";
+import { profile } from "./data/content";
 
 function App() {
   return (
-    <Router>
+    <MotionConfig reducedMotion="user">
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/skills" element={<Skills />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Credentials />
+        <Contact />
+      </main>
+      <footer className="border-t border-zinc-200 py-8 text-center text-sm text-zinc-500 dark:border-zinc-800">
+        © {new Date().getFullYear()} {profile.name}
+      </footer>
+    </MotionConfig>
   );
 }
 
