@@ -2,21 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
-  }
-  body {
-    @apply bg-white text-zinc-800 antialiased dark:bg-zinc-950 dark:text-zinc-300 font-sans;
-  }
-  ::selection {
-    @apply bg-emerald-400/30;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+html {
+  scroll-behavior: smooth;
 }
