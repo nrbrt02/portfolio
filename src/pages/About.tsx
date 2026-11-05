@@ -1,27 +1,28 @@
 import { motion } from "framer-motion";
-import ProfileImage from "../components/Home/ProfileImage";
 
 const About = () => {
   return (
-    <div className="min-h-screen px-6 py-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
+    <section id="about" className="scroll-mt-16 px-6 py-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
       <motion.div
         className="max-w-5xl mx-auto space-y-14"
         initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
         {/* Top: Photo + Intro */}
         <div className="flex flex-col md:flex-row gap-10 items-center">
-          <div className="md:w-1/3">
-            <ProfileImage />
-          </div>
-          <div className="md:w-2/3 space-y-4">
+          <div className="space-y-4">
             <h2 className="text-4xl font-extrabold text-pink-600">About Me</h2>
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              I’m <span className="font-semibold text-pink-600">Norbert</span>, a full-stack developer who
-              enjoys turning ideas into functional, accessible, and elegant digital experiences.
-              With projects in insurance, inventory, ecommerce, and DevOps — I bring both creativity
-              and precision to every build.
+              I’m <span className="font-semibold text-pink-600">Norbert</span>, a full-stack software engineer who
+              enjoys taking an idea all the way from first line of code to a running server. I’m driven by
+              curiosity, pick up new technologies quickly, and care about building software that solves real
+              problems for the people who use it.
+            </p>
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              I work best in collaborative teams where ideas are shared openly, and I’m always looking for the
+              next challenge that pushes me to grow.
             </p>
           </div>
         </div>
@@ -32,34 +33,34 @@ const About = () => {
           <div className="border-l-2 border-pink-600 pl-6 space-y-6">
             {[
                 {
-                    title: "Started Learning Web Development",
-                    date: "2019",
-                    text: "Built my first website using HTML, CSS, JavaScript, and PHP.",
-                },
-                {
-                    title: "Explored Backend Technologies",
-                    date: "2021",
-                    text: "Focused on Laravel and backend logic.",
-                },
-                {
-                    title: "Worked on REST APIs & Real-World Systems",
+                    title: "Started BSc in Software Engineering",
                     date: "2022",
-                    text: "Designed real projects with modern APIs.",
+                    text: "Bachelor of Information Technology: Software Engineering at Adventist University of Central Africa, Kigali.",
                 },
                 {
-                    title: "Explored Infrastructure & DevOps",
+                    title: "Microsoft Azure Certifications",
                     date: "2023",
-                    text: "Docker, Nginx, servers, and deployment techniques.",
+                    text: "Azure Fundamentals (AZ-900) and Azure AI Fundamentals (AI-900).",
                 },
                 {
                     title: "Built Full-Stack Industry Projects",
-                    date: "2024",
-                    text: "Delivered insurance, document systems, ecommerce & inventory platforms.",
+                    date: "2024 – 2025",
+                    text: "Delivered insurance, document management, e-commerce and inventory platforms.",
                 },
                 {
-                    title: "Deep Dive into Cloud & Collaboration",
-                    date: "2025 (Now)",
-                    text: "Focused on DevOps (Docker, Kubernetes, CI/CD), and growing developer community.",
+                    title: "Freelance Full-Stack Developer, ProWater Rwanda",
+                    date: "Oct 2025 – Jun 2026",
+                    text: "Built ProWater MIS, a factory ERP with a TypeScript API, React dashboard and Docker deployment.",
+                },
+                {
+                    title: "Software Engineer, AEGIS",
+                    date: "Feb 2026 – Present",
+                    text: "Building NenoDoc digital archive platforms with document processing, LLMs and pgvector, deployed on AWS and on-premise.",
+                },
+                {
+                    title: "Graduating",
+                    date: "2026",
+                    text: "Finishing my BSc in Software Engineering.",
                 },
                 ]
                 .map((item, index) => (
@@ -84,14 +85,14 @@ const About = () => {
         <div className="text-center pt-10 border-t border-gray-300 dark:border-gray-700">
           <p className="text-xl mb-4">Want to work together or ask me something?</p>
           <a
-            href="/contact"
+            href="#contact"
             className="inline-block px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white font-semibold rounded-lg shadow-md transition"
           >
             Contact Me →
           </a>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

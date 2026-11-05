@@ -2,25 +2,22 @@ import { motion } from "framer-motion";
 import SkillSection from "../components/skills/SkillSection";
 
 // ICONS
+import { FaReact, FaNodeJs, FaPython, FaDocker, FaAws, FaJs } from "react-icons/fa";
 import {
-  FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaPython, FaGitAlt, FaGithub,
-  FaDocker, FaAws, FaLinux, FaJava, FaFigma, FaDatabase, FaJs, FaPhp,
-  FaBootstrap,
-} from "react-icons/fa";
-import {
-  SiTypescript, SiTailwindcss, SiMongodb, SiPostgresql, SiMysql, SiExpress,
-  SiFirebase, SiNextdotjs, SiCpanel, SiApache, SiNginx, SiKubernetes, SiVagrant,
- SiJirasoftware, SiPostman, SiSpringboot, SiFramer,
-  SiSqlite, SiDjango, SiProxmox, SiJsonwebtokens,
+  SiTypescript, SiTailwindcss, SiPostgresql, SiExpress, SiNginx, SiVagrant,
+  SiDjango, SiProxmox, SiTerraform, SiUbuntu, SiOpenai,
 } from "react-icons/si";
+import { VscAzure } from "react-icons/vsc";
+import { TbVectorTriangle } from "react-icons/tb";
 
 const Skills = () => {
   return (
-    <div className="w-full min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
+    <section id="skills" className="scroll-mt-16 w-full bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
     <motion.div
       className="max-w-6xl mx-auto px-6 py-16"
       initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
       transition={{ duration: 0.8 }}
     >
       <h2 className="text-4xl font-extrabold text-center mb-12 text-gray-900 dark:text-white">
@@ -30,25 +27,16 @@ const Skills = () => {
       <SkillSection
         title="Programming Languages"
         skills={[
-          { label: "JavaScript", Icon: FaJs },
-          { label: "TypeScript", Icon: SiTypescript },
           { label: "Python", Icon: FaPython },
-          { label: "Java", Icon: FaJava },
-          { label: "C/C++" },
-          { label: "Bash" },
+          { label: "TypeScript", Icon: SiTypescript },
+          { label: "JavaScript", Icon: FaJs },
         ]}
       />
       <SkillSection
         title="Frontend Development"
         skills={[
           { label: "React", Icon: FaReact },
-          { label: "Next.js", Icon: SiNextdotjs },
           { label: "Tailwind CSS", Icon: SiTailwindcss },
-          { label: "Bootstrap", Icon: FaBootstrap },
-          { label: "HTML5", Icon: FaHtml5 },
-          { label: "CSS3", Icon: FaCss3Alt },
-          { label: "Framer Motion", Icon: SiFramer },
-          { label: "UI/UX Design", Icon: FaFigma },
         ]}
       />
       <SkillSection
@@ -57,59 +45,50 @@ const Skills = () => {
           { label: "Node.js", Icon: FaNodeJs },
           { label: "Express", Icon: SiExpress },
           { label: "Django", Icon: SiDjango },
-          { label: "Spring Boot", Icon: SiSpringboot },
-          { label: "REST API" },
-          { label: "JWT Auth", Icon: SiJsonwebtokens },
+          { label: "REST APIs" },
         ]}
       />
       <SkillSection
         title="Databases"
         skills={[
-          { label: "MySQL", Icon: SiMysql },
           { label: "PostgreSQL", Icon: SiPostgresql },
-          { label: "MongoDB", Icon: SiMongodb },
-          { label: "SQLite", Icon: SiSqlite },
+          { label: "pgvector", Icon: TbVectorTriangle },
         ]}
       />
       <SkillSection
-        title="DevOps & Cloud"
+        title="AI"
+        skills={[
+          { label: "LLM Integration", Icon: SiOpenai },
+          { label: "RAG (retrieval over documents)" },
+        ]}
+      />
+      <SkillSection
+        title="Cloud & Infrastructure"
+        skills={[
+          { label: "AWS", Icon: FaAws },
+          { label: "Microsoft Azure", Icon: VscAzure },
+          { label: "Proxmox", Icon: SiProxmox },
+          { label: "Ubuntu Server", Icon: SiUbuntu },
+        ]}
+      />
+      <SkillSection
+        title="DevOps"
         skills={[
           { label: "Docker", Icon: FaDocker },
-          { label: "Kubernetes", Icon: SiKubernetes },
-          { label: "Vagrant", Icon: SiVagrant },
-          { label: "Proxmox", Icon: SiProxmox },
-          { label: "Git", Icon: FaGitAlt },
-          { label: "GitHub", Icon: FaGithub },
-          { label: "GitHub Actions" },
-          { label: "Firebase", Icon: SiFirebase },
-          { label: "AWS", Icon: FaAws },
-          { label: "Netlify" },
-          { label: "Vercel" },
-          { label: "cPanel", Icon: SiCpanel },
-        ]}
-      />
-      <SkillSection
-        title="Web Servers & Security"
-        skills={[
           { label: "NGINX", Icon: SiNginx },
-          { label: "Apache", Icon: SiApache },
-          { label: "Suricata" },
-          { label: "pfSense" },
-          { label: "SSH & Firewalls" },
+          { label: "Terraform", Icon: SiTerraform },
+          { label: "Vagrant", Icon: SiVagrant },
         ]}
       />
       <SkillSection
-        title="Tools & Platforms"
+        title="Spoken Languages"
         skills={[
-          { label: "Linux", Icon: FaLinux },
-          { label: "Postman", Icon: SiPostman },
-          { label: "Visual Studio Code" },
-          { label: "Figma", Icon: FaFigma },
-          { label: "Jira", Icon: SiJirasoftware },
+          { label: "Kinyarwanda (native)" },
+          { label: "English (C1)" },
         ]}
       />
     </motion.div>
-    </div>
+    </section>
   );
 };
 

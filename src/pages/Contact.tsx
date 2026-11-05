@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
-import { FaEnvelope, FaPhone, FaGithub, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen px-6 py-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
+    <section id="contact" className="scroll-mt-16 px-6 py-16 bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
       <motion.div
         className="max-w-3xl mx-auto space-y-10"
         initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
         <div className="text-center">
@@ -20,7 +21,7 @@ const Contact = () => {
         <div className="space-y-6">
           <div className="flex items-center gap-4 text-lg">
             <FaEnvelope className="text-pink-600" />
-            <span>nor.imurinde@gmail.com</span>
+            <a href="mailto:nor.imurinde@gmail.com" className="hover:text-pink-600 transition">nor.imurinde@gmail.com</a>
           </div>
 
 
@@ -39,7 +40,7 @@ const Contact = () => {
               <FaGithub />
             </a>
             <a
-              href="https://www.linkedin.com/in/mwiseneza-imurinde-norbert"
+              href="https://www.linkedin.com/in/norbert-mwiseneza"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-300 hover:text-pink-600 transition"
@@ -49,7 +50,7 @@ const Contact = () => {
           </div>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

@@ -1,6 +1,5 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaGithub, FaLinkedin, FaMailBulk, FaPhone, FaTwitter } from "react-icons/fa";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 
 const HeroSection = () => {
@@ -19,11 +18,11 @@ const HeroSection = () => {
         sequence={[
           "Norbert Mwiseneza",
           2000,
-          "Full-Stack Developer",
+          "Full-Stack Software Engineer",
           2000,
-          "Cloud Enthusiast",
+          "Software Engineer at AEGIS",
           2000,
-          "DevOps Operator",
+          "Cloud & Server Deployments",
           2000,
           "Lifelong Learner",
           2000,
@@ -34,17 +33,15 @@ const HeroSection = () => {
         className="text-xl md:text-2xl font-medium text-gray-700 dark:text-gray-300"
       />
 
+      <p className="max-w-2xl text-lg text-gray-600 dark:text-gray-400">
+        Full-stack software engineer who enjoys taking an idea all the way from
+        the first line of code to a running server.
+      </p>
+
       <div className="flex justify-center md:justify-start gap-6 text-2xl text-gray-600 dark:text-gray-300 mt-4">
         
         <a
-          href="https://twitter.com/aun_nor"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <FaTwitter className="hover:text-pink-500 transition-transform hover:scale-125" />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/mwiseneza-imurinde-norbert"
+          href="https://www.linkedin.com/in/norbert-mwiseneza"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -58,7 +55,7 @@ const HeroSection = () => {
           <FaGithub className="hover:text-pink-500 transition-transform hover:scale-125" />
         </a>
         <a
-          href="mailto:nrbrt2002@gmail.com"
+          href="mailto:nor.imurinde@gmail.com"
           className="hover:text-pink-500 transition-transform hover:scale-125"
           aria-label="Email Norbert"
         >
@@ -69,21 +66,11 @@ const HeroSection = () => {
 
 
       <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start mt-6">
-        <motion.a
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          href="https://docs.google.com/document/d/1ox4PyrOngIWMnkc0SPam3a9K6tWY2SGd/edit?usp=sharing&ouid=103324068879615888343&rtpof=true&sd=true"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-6 py-2 bg-pink-600 hover:bg-pink-700 text-white font-semibold rounded-xl shadow-lg transition"
-        >
-          View CV
-        </motion.a>
 
         <motion.a
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          href="https://docs.google.com/document/d/1L77JGEiZvSBPDDpQMs5YAwa_DakXH3u4/edit?usp=sharing&ouid=103324068879615888343&rtpof=true&sd=true"
+          href="https://docs.google.com/document/d/1dcbcRDPTUNFZwZXMDPLfgpbjt2U1CaiG/edit?usp=sharing&ouid=103324068879615888343&rtpof=true&sd=true"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-6 py-2 border border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white font-semibold rounded-xl transition"
